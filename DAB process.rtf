@@ -1,0 +1,149 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1347\cocoasubrtf570
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\margl1440\margr1440\vieww18680\viewh13940\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f0\fs34 \cf0 ///////// Process ////////// -change\
+\
+- - - - - - -Session1:\
+Verticals = hotel, flight, jobs, etc. have diff Feed structures like star ratings or sale price that may not be relevant to others.\
+\
+Ad Gallery: Dynamaic ads > Select Vertical (custom, ) in the DAB-UI\
+Zips must be < 150kb, can split into parts.\
+\
+Snipit \'97 chrome add-on to create an annoted screenshot to send to the developer, its a hosted url, so is easy to update after sending.\
+\
+a url containing .corp is internal only, and cannot be sent to client\
+Create previews for the client using the DAB tool > Select sizes > create preview > get external link \
+(do 3 sets; Squares, Verticals & Horizontals)\
+\
+My job is to get client approval on mockups and upload the zip file from development\
+\
+Google Adwords is my primary target, may also use Double-click and other sources\
+\
+DBA = Dynamic Ads = DAB + Dynamic Ad Builder\
+\
+Assets I need from Client = Feed ID, Logo, Fonts, CID (customer id), GMC id (Google Merchant Center)\
+\
+JSON = Javascript Object Notation, I create these from the Feeds, in the adwords ui, I can enter a feed number, generate a preview, and click a blue link that shows a page of code ending with product ids 0-5. Then I run this file through a formatter so it\'92s easier to read, open this in a text editor, add some line breaks between sections, save with .json and send to the developer.\
+\
+Video Conference / Hangout : Built into Chrome browser. Once meeting has been set, view in Google Calendar, can click link to view/start video conference. Can share your screen via a butcon, and select window to share (1st 2 choices are full screens [if 2 monitors] and other screens are for single apps. Alternate is to send an invite to video chat directly in the Chrome browser just an IM.\
+\
+To start the python server: Open iTerm and navigate to your local repo directory \
+	cd Sites/qaPreviewTool/\
+	python -m SimpleHTTPServer 8888\
+\
+TAT = Turn Around Time\
+\
+\
+- - - - Session2:\
+\
+\
+- - - - - Session3 first job (IHG)\
+\
+\
+\
+/////////////  Create Mockups Steps ///////////////////\
+\'97(Jos A Bank)\
+\
+1. Determine what sizes of Mockups are needed\
+\
+2. Gather Assets: Logo, Fonts, Colors, product images and sample text from the Feed ID\
+\
+3. Find source PSDs for desired sizes:\
+    can download pre-selected layouts here: {\field{\*\fldinst{HYPERLINK "https://sites.google.com/a/google.com/gdn-custom-dynamic-display-creatives/designs/mockups"}}{\fldrslt https://sites.google.com/a/google.com/gdn-custom-dynamic-display-creatives/designs/mockups}}\
+\
+4. Get JSON file from Feed id, ex: \
+	\'95 Copy GMC Feed ID  (like 5460106)\
+	\'95 Open AdWords {\field{\*\fldinst{HYPERLINK "https://awics.corp.google.com/cm/CampaignMgmt?__c=5382705184&__u=9443117584&__o=cues#c.192012696.ag&app=cm"}}{\fldrslt https://awics.corp.google.com/cm/CampaignMgmt?__c=5382705184&__u=9443117584&__o=cues#c.192012696.ag&app=cm}}\
+		\'95 in left column, scroll to bottom, select \'93Ton\'92s Test DAB Generic Ad Group #1\'94\
+		\'95 in top row of gray tabbed panels, select Ads\
+		\'95 lower left Red \'93+ AD ^\'94 button click and pull down to \'93Ad Gallery\'94\
+		\'95 Select \'93Dynamic Ads\'94 top left\
+		\'95 Choose desired vertical, usually need to \'91select more\'92 and scroll down to \'93Dynamic product ads - image ads\'94 which is Retail\
+	\'95 On next page (still AdWords)\
+		\'95 left column, 2nd module down \'91Google Merchant Center\'92 > more options > paste in the \'91Preview Feed ID\'92\
+		\'95 left column, 1st module, radio button = Upload your own layout\
+		\'95 middle column, \'91Select Ad Sizes\'92\
+		\'95 on Preview popup, click one of the blue links \'91Get data for custom layout\'92\
+	\'95 On new tab, page full of text, select all\
+	\'95 Open JSON formatter: {\field{\*\fldinst{HYPERLINK "http://motifcdn2.doubleclick.net/NAM/ddabpreview/ton/tool/JsonFormatter/index.html"}}{\fldrslt http://motifcdn2.doubleclick.net/NAM/ddabpreview/ton/tool/JsonFormatter/index.html}} \
+	paste raw text feed into INPUT STRING, and click Unescape\
+	Copy the OUTPUT STRING, paste into new file in Sublime Text2\
+	And add some linebreaks to separate the items, 0,1,2,3,4,5\
+\
+4.alt1 Get data w/o a Feed ID:\
+	Pulling assets out of the Preview&Q/A tool: Go to the Internal Custom page, get a url something like this:\
+	{\field{\*\fldinst{HYPERLINK "http://dabpreview.cbf.corp.google.com/retail.html?layout=custom/JCPenny_1a/JCPenny_1a&html5=true&preview=rei&overlays=true"}}{\fldrslt http://dabpreview.cbf.corp.google.com/retail.html?layout=custom/JCPenny_1a/JCPenny_1a&html5=true&preview=rei&overlays=true}}\
+\
+	Then edit the url to see samples of other jobs:\
+	\'95 Replace \'91Retail\'92 with other verticals like \'91Hotel\'92 \
+	\'95 Remove \'93true\'94 after overlays=\
+	\'95 Replace \'91rei\'92 with a feed string to see other products\'85 like \'91IHG-holidayinn_HPA\'92 you can view another product similar to what you want and copy the feed parameter from the url\
+\
+4.alt2 Creating a JSON file, method:\
+	in /Users/kentmyers/Sites/qaPreviewTool/data/preview\
+	sampleDynX.json and a whole set of sample files for each vertical. don\'92t use files named \'93sample-\'93\
+\
+5. Create new mockup file by copying \'93Custom Layout Mockup: [MASTER]\'94\
+	located here:  gDrive > Custom Layouts Team Workflow > Mockup Docs\
+	Create PSDs for mockups, arrange images, copy to clipboard and paste into the mockups file on gDrive\
+\
+6. Revise as needed, correspondence in gCases\
+\
+> Milestone: Client Approves Mockup \
+\
+\
+\
+\
+//////// Consult (send to development) after mockup approval ///////////////////////\
+\
+1. Create Feed map:\
+	Use snipit to screenshot one mockup like the square one\
+	Identify & label all the dynamic areas of color, images, text, etc. and how it relates to specific fields in the \'91Feed\'92\
+\
+2. Create Request Doc     gDrive > Custom Layouts Team Workflow > Dev Request Doc > \
+	Make a copy of [Master] and then fill in the blanks\
+	Name as Client_1a, 2a, etc.\
+	Vertical from case message #1\
+	link to mockup & feed map, \
+	spec dynamic colors in JSON and in the Request Doc if hardcoded\
+	spec fonts in Request Doc\
+	List dynamic attributes\
+	Enter name of JSON file\
+	\
+	\
+\
+3. Create Consult Case, (2nd hardest part) by selecting \'93Consult\'94 at bottom of the Case threads\
+	to: RM TS BCD\
+	from: me\
+	category: Aristotle\
+	subject :\
+	requester: me\
+\
+4. Collect, zip, and post to gDrive Handoff_Assets\
+	Create a logo PNG at largest size to be used by all banners\
+	JSON file\
+	Mockup PSDs\
+\
+5. Monitor Feedback via consult order on the Cases page\
+\
+\
+\
+/////////// Create JSON doc from Spreadsheet /////////////////\
+\
+\'95 Download XLS doc (which I can\'92t open w/o ms office apps)\
+\'95 Save to google drive\
+\'95 Now I can open with a google app\
+\'95 Copy and paste 6 rows of info into a working JSON doc\
+\'95 Test the JSON doc works by: \
+\'95 Go to DAB Preview & Q/A tool - Custom Local {\field{\*\fldinst{HYPERLINK "http://localhost:8888/retail.html"}}{\fldrslt http://localhost:8888/retail.html}} delete all after 8888/ and choose a green link to previous file\
+or {\field{\*\fldinst{HYPERLINK "http://localhost:8888/retail.html"}}{\fldrslt http://localhost:8888/}}{\field{\*\fldinst{HYPERLINK "http://dabpreview.cbf.corp.google.com/retail.html?layout=custom/JCPenny_1a/JCPenny_1a&html5=true&preview=rei&overlays=true"}}{\fldrslt retail.html?layout=custom/JCPenny_1a/JCPenny_1a&html5=true&preview=rei}}\
+if page doesn\'92t load, then start the Python Server\
+\'95 Make sure your new JSON file is in this local folder: /Users/kentmyers/Sites/qaPreviewTool/data/preview/\
+\'95 Then in the browser url, change \'91rei\'92 to your new filename (w/o the .JSON extension)\
+\'95 That should load the new JSON feed into the preview tool\
+\
+\
+}
