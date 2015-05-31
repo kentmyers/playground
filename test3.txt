@@ -1,4 +1,9 @@
 created tue may 19
 added line remotely
 add line locally
+<<<<<<< HEAD
 line4 added locally
+=======
+
+line 5 added remotely
+>>>>>>> 828641146598915d5ad617106ff237b350228277
