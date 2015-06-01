@@ -1,4 +1,2 @@
 created tue may 19
-line 2 added locally
-line3 added remotely
-line4 added remotely
+line 2 added locally-removed lines 3&4 remotely
