@@ -1,5 +1,0 @@
-created tue may 19
-line 2 added locally-removed lines 3&4 remotely
-added line3 remotely
-
-line5 added locally
